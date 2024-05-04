@@ -1,0 +1,4 @@
+def get_corp_tax_rate(p_ryp):
+    return when(p_ryp >= to_date('2015-01-01','yyyy-mm-dd'), 0.4035).when(p_ryp >= to_date('2011-01-01','yyyy-mm-dd'), 0.4035).when(p_ryp >= to_date('2010-01-01','yyyy-mm-dd'), 0.4275).when(
+        p_ryp >=to_date( '2009-12-01','yyyy-mm-dd'), 0.4075).when(p_ryp >= to_date('2006-01-01','yyyy-mm-dd'), 0.395).otherwise(0.39)
+      
